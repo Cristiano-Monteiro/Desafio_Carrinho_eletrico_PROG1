@@ -4,17 +4,15 @@ def calculo_tempo(posicao_inicial, posicao_final, carga):
     tempo = variacao_posicao / velocidade
     return tempo
 
+N = D = 0
+
 # Restrição:  1 ≤ N ≤ 1000
-while(True):
+while(not(1 <= N <= 1000)):
     N = int(input('Numero de baterias: ')) 
-    if(1 <= N <= 1000):
-        break
 
 # Restrição:  1.0 ≤ D ≤ 10000.0
-while(True):
+while(not(1 <= D <= 10000)):
     D = float(input('Comprimento da pista: ')) 
-    if(1 <= D <= 10000):
-        break
 
 lista_baterias = []
 lista_posicoes = []
@@ -26,22 +24,19 @@ for i in range(0, N):
         print('Posição da bateria: 0.0')
         P = 0.0
         # Restrição: 0.0 < C < 100.0
-        while(True):
+        C = 0
+        while(not(0 < C < 100)):
             C = float(input('Carga da bateria: '))
-            if(0 < C < 100):
-                break
     else:
         # Restrição:  0.0 ≤ P < D
-        while(True):
+        P = 0
+        while(not(0 < P < D)):
             P = float(input('Posição da bateria: '))
-            if(0 <= P < D):
-                break
 
         # Restrição: 0.0 < C < 100.0
-        while(True):
+        C = 0
+        while(not(0 < C < 100)):
             C = float(input('Carga da bateria: '))
-            if(0 < C < 100):
-                break
     lista_posicoes.append(P)
     lista_baterias.append(C)
 

@@ -47,6 +47,11 @@ for i in range(quantidade_bateria):
     if(tempo_atual <= tempo_comparacao or i == quantidade_bateria-1):
         total_tempo += tempo
         tempo = tempo_atual
+
+    print()
+    print('Posição: ', posicoes[posicao])
+    print('Tempo: ', tempo)
+    print('total_tempo: %.3f' %total_tempo)
     print('---'*30)
 
 print('Menor tempo: {:.3f}'.format(total_tempo))
